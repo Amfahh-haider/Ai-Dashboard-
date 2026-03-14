@@ -1,0 +1,115 @@
+:root {
+    --primary: #667eea;
+    --secondary: #764ba2;
+    --accent-1: #ff6b6b;
+    --accent-2: #feca57;
+    --dark-1: #0f0f1a;
+    --dark-2: #1a1a2f;
+}
+
+body {
+    font-family: 'Clash Display', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-1);
+    color: white;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.button-secondary {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.button-icon {
+    background: transparent;
+}
+
+.button-danger {
+    background-color: var(--accent-1);
+    color: white;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.form-input {
+    position: relative;
+}
+.form-input input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-input label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    transition: 0.2s ease all;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes float {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+@keyframes bounce {
+    from, 20%, 50%, 80%, to { transform: translateY(0); }
+    40% { transform: translateY(-30px); }
+    60% { transform: translateY(-15px); }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
